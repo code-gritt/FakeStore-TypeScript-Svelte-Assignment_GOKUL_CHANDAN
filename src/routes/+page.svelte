@@ -1,5 +1,7 @@
 <script>
-	import Store from './store/Store.svelte';
+	import Footer from './Footer.svelte';
+	import Header from './Header.svelte';
+	import Store from './Store.svelte';
 </script>
 
 <svelte:head>
@@ -8,5 +10,7 @@
 </svelte:head>
 
 <section>
+	<Header />
 	<Store />
+	<Footer />
 </section>
