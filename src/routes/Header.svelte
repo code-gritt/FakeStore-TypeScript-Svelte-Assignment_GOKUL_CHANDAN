@@ -1,5 +1,13 @@
-<!-- component -->
-<div class="bg-white">
+<script>
+	import Modal from './Modal.svelte';
+
+	let showModal = false;
+	const handleClose = () => {
+		showModal = false;
+	};
+</script>
+
+<div class="fixed w-full bg-white">
 	<div class="border py-3 px-6">
 		<div class="flex justify-between">
 			<div class="flex items-center">
@@ -84,6 +92,7 @@
 
 				<div
 					class="flex cursor-pointer items-center gap-x-1 rounded-md py-2 px-4 hover:bg-gray-100"
+					on:click={() => (showModal = true)}
 				>
 					<div class="relative">
 						<svg
@@ -161,4 +170,8 @@
 			>
 		</div>
 	</div>
+</div>
+
+<div class="transition duration-150 ease-out hover:ease-in">
+	<Modal show={showModal} on:close={handleClose} />
 </div>

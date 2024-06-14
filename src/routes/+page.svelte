@@ -1,5 +1,5 @@
 <script>
-	import Store from './Store.svelte';
+	import ProductList from './product_list.svelte';
 </script>
 
 <svelte:head>
@@ -8,5 +8,5 @@
 </svelte:head>
 
 <section>
-	<Store />
+	<ProductList />
 </section>

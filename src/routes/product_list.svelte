@@ -23,16 +23,17 @@
 	}
 </script>
 
-<h3 class="text-gray-600 text-2xl font-medium px-6">Products</h3>
-
-{#each products as product}
-	<div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
-		<div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-			<div class="flex items-end justify-end h-56 w-full bg-cover">
+<h3 class="text-gray-600 text-2xl font-medium p-7">Products</h3>
+<div class="grid gap-6 p-7 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
+	{#each products as product}
+		<div
+			class="transition duration-150 ease-out hover:ease-in w-full max-w-sm mx-auto rounded-md p-2 shadow-md overflow-hidden"
+		>
+			<div class="flex items-end justify-center h-60 w-60 bg-cover">
 				<img src={product.image} alt="images" />
 			</div>
 			<button
-				class="p-2 rounded-full bg-blue-600 text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
+				class="p-2 mb-5 float-right rounded-full bg-blue-600 text-white mx-5 hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
 			>
 				<svg
 					class="h-5 w-5"
@@ -49,9 +50,9 @@
 			</button>
 
 			<div class="px-5 py-3">
-				<h3 class="text-gray-700 uppercase">{product.title}</h3>
-				<span class="text-gray-500 mt-2">${product.price}</span>
+				<h3 class="text-gray-700 font-semibold uppercase">{product.title}</h3>
+				<span class="text-gray-500 mt-5 font-semibold">${product.price}</span>
 			</div>
 		</div>
-	</div>
-{/each}
+	{/each}
+</div>
